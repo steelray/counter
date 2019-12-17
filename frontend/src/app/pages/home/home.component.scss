@@ -13,8 +13,12 @@
 
     span {
       font-size: 22px;
-      color: green;
       font-weight: bold;
+
+      &.highlight {
+        color: green;
+
+      }
     }
   }
 }
