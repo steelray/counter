@@ -1,0 +1,20 @@
+<div mat-dialog-content>
+  <table>
+    <thead>
+      <tr>
+        <th>Текущий</th>
+        <th>Следующий</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{data.currentCount}}</td>
+        <td>{{data.nextCount}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="text-center">
+  <button mat-button (click)="onCancel()">Отмена</button>
+  <button mat-button mat-raised-button color='primary' (click)="onConfirm()">Подтверждения</button>
+</div>

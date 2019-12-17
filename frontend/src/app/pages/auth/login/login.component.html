@@ -1,0 +1,14 @@
+<h2>Login</h2>
+<form [formGroup]="form" class="login-form" (ngSubmit)="onSubmit()">
+  <mat-form-field class="default-form-field">
+    <input matInput formControlName="username" placeholder="Username" />
+    <mat-error *ngIf="f.username.errors && f.username.errors.required">Username is required</mat-error>
+  </mat-form-field>
+  <mat-form-field class="default-form-field">
+    <input matInput formControlName="password" type='password' placeholder="password" />
+    <mat-error *ngIf="f.password.errors && f.password.errors.required">Password is required</mat-error>
+  </mat-form-field>
+  <div class="text-center">
+    <button mat-button mat-raised-button color="primary">Login</button>
+  </div>
+</form>

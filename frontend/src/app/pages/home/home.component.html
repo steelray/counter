@@ -1,0 +1,6 @@
+<ng-container *ngIf='counter$ | async as counter'>
+  <div class="count">
+    Cчёт: <span>{{counter.currentCount}}</span>
+  </div>
+  <button mat-button mat-raised-button color='primary' (click)='onIncrement(counter)'>приращение</button>
+</ng-container>
