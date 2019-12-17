@@ -13,9 +13,11 @@ app.use(passport.initialize());
 require('./middleware/passport')(passport);
 
 // routes
+const homeRoutes = require('./routes/home');
 const authRoutes = require('./routes/auth');
 const counterRoutes = require('./routes/counter');
 
+app.use('/', homeRoutes);
 app.use('/auth', authRoutes);
 app.use('/counter', passport.authenticate('jwt', {
   session: false
